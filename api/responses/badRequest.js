@@ -51,7 +51,7 @@ module.exports = function badRequest(data, options) {
   // Otherwise try to guess an appropriate view, or if that doesn't
   // work, just send JSON.
   if (options.view) {
-    return res.view(options.view, { data: data });
+    return res.view(options.view, { _layoutFile: false, data: data });
   }
 
   // If no second argument provided, try to serve the implied view,

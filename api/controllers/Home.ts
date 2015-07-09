@@ -53,7 +53,7 @@ export module Controllers {
                 options.title = "Help center";
                 req.flash('messages', 'You are now on the help center!');
 
-                this._renderView(req, res, options);
+                this._renderView(req, res, options, 'home/help_center');
             });
         }
 
