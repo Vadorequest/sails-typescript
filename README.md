@@ -4,6 +4,25 @@ An example of how to use TypeScript on the server side with Sails.js framework.
 
 Based on EJS view engine *(default Sails view engine)*.
 
+## Getting started
+
+Assuming node, npm, sails are installed.
+*You may need to install `npm install -g tsd`*
+
+1. Clone the repo
+2. Run `npm install`
+3. Run `grunt` (will generate all .js file from ts, you can't start up sails before doing that)
+4. Run `sails lift`
+5. Go to `http://localhost:1337/`
+
+http://localhost:1337/
+
+http://localhost:1337/help
+
+http://localhost:1337/dashboard
+
+http://localhost:1337/dashboard/user
+
 ## Compile TS on file change
 All TS files in `api/` are compiled through `grunt:ts`.
 
