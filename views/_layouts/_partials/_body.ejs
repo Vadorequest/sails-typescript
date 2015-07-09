@@ -1,0 +1,9 @@
+<% /* Generates body classes depending on the current layout, controller, action, theme and language used. */ %>
+<body class="<%= _.chain(['layout_' + layout, controller.replace('/', '_'), 'action_' + action, 'theme_' + theme, currentUser.nativeLanguage || 'en', currentUser.connected ? 'connected' : 'visitor']).join(' ')%>">
+
+<%/* Specific stuff by layout. */%>
+<% if(layout == 'default'){%>
+
+<%}else if(layout == 'dashboard'){%>
+
+<%}%>

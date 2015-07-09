@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+
+        <%/* Additional shared meta. */%>
+        <%- partial('_partials/meta')%>
+
+        <%/* Inject configuration. */%>
+        <%- partial('_partials/config')%>
+
+        <%/* Inject dynamic styles. */%>
+        <%- partial('_partials/dynamicStyles')%>
+
+        <%/* Inject all dynamic scripts that must be required on top level. */%>
+        <%- partial('_partials/dynamicScriptsHead')%>
+
+        <%/* Specific IE includes. */%>
+        <%- partial('_partials/ie')%>
+
+        <%/* Specific scripts to include. Managed by ejs-locals */%>
+        <%- partial('_partials/injectScripts')%>
+
+        <%/* Inject any scripts that would be specific to the view - i.e: script('/js/foo.js') */%>
+        <%- scripts%>
+
+        <%/* Inject any stylesheets that would be specific to the view - i.e: stylesheet('/css/foo.css') */%>
+        <%- stylesheets%>
+
+    </head>
+
+    <% /* Inject body tag with specific classes. */ %>
+    <%- partial('_partials/body')%>
+
+    <%- partial('default/main') %>
+
+    <%/* Inject templates. */%>
+    <%- partial('_partials/dynamicTemplates')%>
+
+    <%/* Inject all scripts left. */%>
+    <%- partial('_partials/dynamicScripts')%>
+
+    <%/* Required shared scripts. Loader and requirejs. */%>
+    <%- partial('_partials/jsAfter')%>
+
+    </body>
+</html>

@@ -1,0 +1,12 @@
+<!--MAIN SECTION-->
+<section id="global" class="flex-1">
+    <section id="main" class="<%= !currentUser.connected ? 'container' : '' %>" role="main">
+        <% /* If user not connected, add "container" class */ %>
+            <% /* Load the public partial to display a group of messages. */ %>
+            <%- partial('../../_partials/displayFlashMessages', {messages: flash.messages}) %>
+
+            <% /* Load the view content, depending on the called url. */ %>
+            <%- body %>
+    </section>
+</section>
+<!--MAIN SECTION END-->

@@ -14,6 +14,20 @@
 module.exports = function(grunt) {
 
 	grunt.config.set('sails-linker', {
+
+        devJsBefore: {
+            options: {
+                startTag: '<!--SCRIPTS HEAD-->',
+                endTag: '<!--SCRIPTS HEAD END-->',
+                fileTmpl: '<script src="%s"></script>',
+                appRoot: '.tmp/public'
+            },
+            files: {
+                '.tmp/public/**/*.html': require('../pipeline').jsFilesToInjectBefore(grunt),
+                'views/**/*.html': require('../pipeline').jsFilesToInjectBefore(grunt),
+                'views/**/*.ejs': require('../pipeline').jsFilesToInjectBefore(grunt)
+            }
+        },
 		devJs: {
 			options: {
 				startTag: '<!--SCRIPTS-->',

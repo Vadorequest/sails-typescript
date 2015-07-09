@@ -1,0 +1,80 @@
+########################
+# node.js / npm
+########################
+lib-cov
+*.seed
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+node_modules
+results
+
+
+########################
+# misc / editors
+########################
+*~
+~$*
+*#
+.DS_STORE
+.netbeans
+nbproject
+.idea
+
+
+########################
+# local config
+########################
+nbproject/private
+*/node_modules/
+.tmp/
+config/local
+logs/
+
+# Soft - Database and UML
+*sws
+
+
+########################################################################################################################
+## ################################################ Generated files ################################################ ##
+########################################################################################################################
+
+
+########################
+# Generated TS controller's files
+########################
+# Ignore all map.js files and .js files.
+api/controllers/**/*.js*
+# Ignore all TS definition files.
+api/controllers/**/*.d.ts
+# But don't ignore those whose ends with "Controller.js", because they're Sails native controllers.
+!api/controllers/**/*Controller.js
+# But do ignore our CoreController.js and CoreController.js.map generated file
+api/controllers/**/CoreController.js*
+
+
+########################
+# Generated TS model's files
+########################
+# Ignore all map.js files and .js files.
+api/db/models/**/*.js*
+# Ignore all TS definition files.
+api/db/models/**/*.d.ts
+
+
+########################
+# Generated TS lib's files
+########################
+# Ignore all map.js files and .js files. But only in the main directory.
+api/lib/*.js*
+# Ignore all TS definition files. But only in the main directory.
+api/lib/*.d.ts
+
+########################
+# Temporary documentation
+########################
+documentation/Developper Guide

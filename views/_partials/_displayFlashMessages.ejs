@@ -1,0 +1,14 @@
+<% /* Display all messages */ %>
+<% if(messages){%>
+    <script type="text/javascript">
+        /**
+         * Generate flash messages.
+         */
+        $(function(){
+            <% _.each(messages, function(message){ %>
+                // Display
+            Materialize.toast('FLASH MESSAGE: <%= message %>');
+            <%})%>
+        });
+    </script>
+<% } %>
